@@ -18,41 +18,60 @@ LORAFRAME is an advanced AI pipeline designed to generate consistent, evolving d
 
 ```mermaid
 graph TD
-  subgraph Client
-    UI[Web UI / Mobile / Integration]
-  end
 
-  subgraph API_Layer
-    API[FastAPI Backend]
-  end
+  %% ===== CLIENT LAYER =====
+  U["User / Client App"] --> API["API Gateway (FastAPI)"]
 
-  subgraph Logic_Core
-    Orch[Orchestrator]
-    MemEng[Memory Engine]
-    PromptEng[Groq Prompt Engine]
-  end
+  %% ===== JOB QUEUE =====
+  API --> Q["Redis Queue (RQ)"]
 
-  subgraph Data_Layer
-    PG[(Postgres: Metadata)]
-    VDB[(Vector DB: Pinecone/Milvus)]
-    S3[(Object Storage)]
-  end
+  %% ===== WORKERS =====
+  Q --> GEN["Generator Worker"]
+  Q --> REF["Refiner Worker"]
+  Q --> STA["State Analyzer Worker"]
+  Q --> COL["LoRA Collector Worker"]
+  Q --> TRN["LoRA Trainer Worker"]
 
-  subgraph GenAI_Services
-    Gemini[Google Gemini / Imagen]
-    Veo[Google Veo (Video)]
-  end
+  %% ===== DATA LAYER =====
+  PG["Postgres Metadata DB"]
+  VDB["Vector DB (Embeddings)"]
+  OBJ["Object Storage (Images / Models)"]
 
-  UI --> API
-  API --> Orch
-  Orch --> MemEng
-  MemEng --> PG
-  MemEng --> VDB
-  Orch --> PromptEng
-  PromptEng --> Gemini
-  PromptEng --> Veo
-  Gemini --> S3
-  Veo --> S3
+  %% ===== MEMORY =====
+  GEN --> PG
+  GEN --> VDB
+  STA --> PG
+  STA --> VDB
+
+  %% ===== PROMPT ENGINE =====
+  GEN --> LLM["LLM Prompt Engine"]
+
+  %% ===== LORA SYSTEM =====
+  GEN --> LR["LoRA Registry"]
+  LR --> GEN
+  COL --> TRN
+  TRN --> OBJ
+  TRN --> LR
+  LR --> PG
+
+  %% ===== GENERATION =====
+  GEN --> AI["Image / Video Generator"]
+  AI --> OBJ
+
+  %% ===== VALIDATION =====
+  AI --> VAL["Vision Validator (IDR)"]
+  VAL -->|Pass| STA
+  VAL -->|Fail| REF
+
+  %% ===== REFINEMENT LOOP =====
+  REF --> AI
+
+  %% ===== LORA DATA PIPELINE =====
+  STA --> COL
+
+  %% ===== ADMIN UI =====
+  API --> UI["Admin / Dashboard"]
+
 ```
 
 ---
