@@ -59,7 +59,12 @@ graph TD
 
 ##  Technology Stack
 
-*   **Backend**: Python 3.10+, FastAPI
+### Frontend
+*   **Framework**: React.js
+*   **Language**: JavaScript
+
+### Backend
+*   **Framework**: Python 3.10+, FastAPI
 *   **Database**: PostgreSQL (SQLAlchemy), Redis (Caching/Queues)
 *   **Vector Database**: Pinecone / Milvus / FAISS
 *   **LLM Inference**: Groq (Llama 3 70B/8B)
@@ -87,9 +92,15 @@ graph TD
 
 ---
 
-## API Documentation
+##  Deployment URLs
 
-** Live Backend (GCP):** [Online API Docs (Swagger UI)](https://cineai-api-4sjsy6xola-uc.a.run.app/docs)
+**Frontend (Live App):** [https://lore-frame-in.vercel.app](https://lore-frame-in.vercel.app)
+
+**Backend API (GCP):** [Online API Docs (Swagger UI)](https://cineai-api-4sjsy6xola-uc.a.run.app/docs)
+
+---
+
+## API Documentation
 
 Detailed endpoint documentation is available in [API_DOCUMENTATION.md](API_DOCUMENTATION.md).
 
