@@ -43,10 +43,7 @@ LORAFRAME is an advanced AI pipeline designed to generate consistent, evolving d
 **Oblique Angle**
 <img width="464" height="684" alt="image" src="https://github.com/user-attachments/assets/9d6d082a-4c7c-4543-81c6-4dd6d09af7b9" />
 
-**Point Of View**
-<img width="454" height="675" alt="image" src="https://github.com/user-attachments/assets/15f51df9-d690-44fe-8257-fc76e993ec82" />
 
-<img width="449" height="672" alt="image" src="https://github.com/user-attachments/assets/4af42b01-b8ed-43b5-a472-a3efc462ed54" />
 
 
 
