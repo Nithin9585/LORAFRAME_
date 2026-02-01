@@ -13,6 +13,43 @@ LORAFRAME is an advanced AI pipeline designed to generate consistent, evolving d
 *   **Self-Healing**: Automated "Refiner" loop detects identity drift and repairs faces if they deviate from the character's canonical look.
 
 ---
+**Eye Level**
+<img width="486" height="687" alt="image" src="https://github.com/user-attachments/assets/5bc45e90-8ff3-41f1-8702-8f2d552efc80" />
+
+**high angle**
+<img width="505" height="687" alt="image" src="https://github.com/user-attachments/assets/db6908d2-9eee-4825-9d2e-65e3fa9d4ca4" />
+
+
+**low angle**
+<img width="468" height="690" alt="image" src="https://github.com/user-attachments/assets/728c0182-c073-4f5a-b677-ad4aaec03412" />
+
+
+**low angle**
+<img width="290" height="408" alt="image" src="https://github.com/user-attachments/assets/c094914a-3dcf-402c-89a0-927c304401de" />
+
+**BirdEyes**
+<img width="501" height="688" alt="image" src="https://github.com/user-attachments/assets/292daff9-33dd-468b-a253-2ca62ca494d1" />
+
+
+**dutch angle**
+<img width="501" height="678" alt="image" src="https://github.com/user-attachments/assets/31cd3a9d-c1db-40c3-9028-b2bccb31159d" />
+
+**Worm's Eye View**
+<img width="466" height="689" alt="image" src="https://github.com/user-attachments/assets/f127d692-0b50-4b8a-b3d0-100ccdbdc144" />
+
+**Over The Shoulder**
+<img width="487" height="677" alt="image" src="https://github.com/user-attachments/assets/39fcbcda-27fc-4f36-8656-613b4b8ed9ae" />
+
+**Oblique Angle**
+<img width="464" height="684" alt="image" src="https://github.com/user-attachments/assets/9d6d082a-4c7c-4543-81c6-4dd6d09af7b9" />
+
+**Point Of View**
+<img width="454" height="675" alt="image" src="https://github.com/user-attachments/assets/15f51df9-d690-44fe-8257-fc76e993ec82" />
+
+<img width="449" height="672" alt="image" src="https://github.com/user-attachments/assets/4af42b01-b8ed-43b5-a472-a3efc462ed54" />
+
+
+
 
 ##  Architecture
 
